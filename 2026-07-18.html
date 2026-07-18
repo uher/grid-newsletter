@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>그리드 트레이딩 뉴스레터 · 2026-07-18</title>
+<style>
+  :root {
+    --bg:#f7f6f2; --card:#fff; --line:#ddd9cf; --ink:#17160f; --ink2:#524e42; --ink3:#8a8574;
+    --pos:#2a78d6; --neg:#e34948; --mono:ui-monospace,Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#16160f; --card:#1e1d15; --line:#3a3728; --ink:#f5f3ea; --ink2:#c3bfab;
+             --ink3:#8d8873; --pos:#3987e5; --neg:#e66767; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font-family:-apple-system,"SF Pro Text","Segoe UI",sans-serif; line-height:1.55; }
+  .wrap { max-width:760px; margin:0 auto; padding:36px 20px 70px; }
+  .eyebrow { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink3);
+              font-weight:600; margin-bottom:6px; }
+  h1 { font-size:24px; margin:0 0 4px; }
+  .sub { color:var(--ink2); font-size:14px; margin-bottom:26px; }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink3);
+        margin:32px 0 12px; }
+  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
+  .tile { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .tile .l { font-size:12px; color:var(--ink3); margin-bottom:4px; }
+  .tile .v { font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:19px; font-weight:600; }
+  .pos { color:var(--pos); } .neg { color:var(--neg); }
+  .note { background:var(--card); border:1px solid var(--line); border-left:3px solid var(--pos);
+           border-radius:8px; padding:14px 18px; font-size:13.5px; color:var(--ink2); margin:16px 0; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  .tblwrap { overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--card); }
+  th,td { padding:9px 12px; text-align:right; white-space:nowrap;
+           font-variant-numeric:tabular-nums; font-family:var(--mono); }
+  th:first-child,td:first-child { text-align:left; font-family:inherit; }
+  thead th { color:var(--ink3); font-weight:600; font-size:11px; text-transform:uppercase; }
+  tbody tr { border-top:1px solid var(--line); }
+  svg { width:100%; height:auto; display:block; }
+  footer { margin-top:40px; padding-top:16px; border-top:1px solid var(--line);
+            font-size:12px; color:var(--ink3); }
+</style></head><body>
+<div class="wrap">
+  <div class="eyebrow">Grid Trading Daily</div>
+  <h1>그리드 트레이딩 뉴스레터</h1>
+  <div class="sub">2026-07-18 발행 · 기초자산 KODEX SK하이닉스 레버리지 (0193T0)</div>
+
+  <h2>계좌 진실 — 증권사 계좌 기준 (조작 불가)</h2>
+  <div class="tiles">
+    <div class="tile"><div class="l">총 투자원금</div><div class="v">61,200,000원</div></div>
+    <div class="tile"><div class="l">현재 순자산</div><div class="v">57,077,979원</div></div>
+    <div class="tile"><div class="l">손익</div><div class="v neg">-4,122,021원 (-6.74%)</div></div>
+    <div class="tile"><div class="l">기초자산 같은기간</div><div class="v neg">-34.1%</div></div>
+  </div>
+  <div class="note">같은 기간 기초자산은 <b>-34.1%</b> 움직였습니다. 단순 매수보유였다면
+  약 <b>-20,863,080원</b>이었을 자리입니다. 그리드 전략의 성과는 "얼마나 벌었나"보다
+  <b>"시장 대비 얼마나 방어/초과했나"</b>로 읽어주세요.</div>
+
+  <h2>일자별 그리드 사이클 수확 (활동 지표)</h2>
+  <div class="note">사이클 수확은 그리드가 완성한 매수→매도 사이클의 실현 기록 합계입니다
+  (기간 합계 <b>+8,089,522원</b>). 보유 재고의 평가손익은 포함되지 않으므로
+  <b>총손익이 아니라 전략 활동량 지표</b>입니다 — 총손익은 위의 계좌진실이 기준입니다.</div>
+  <div class="tblwrap" style="padding:16px 16px 6px;">
+    <svg id="chart" viewBox="0 0 720 240"></svg>
+  </div>
+
+  <h2>일자별 상세</h2>
+  <div class="tblwrap"><table>
+    <thead><tr><th>날짜</th><th>시가</th><th>종가</th><th>등락</th><th>사이클수확(원)</th><th>사이클</th></tr></thead>
+    <tbody><tr><td>07-07</td><td>24,220</td><td>22,130</td><td class='neg'>-8.6%</td><td class=''>+0</td><td>0</td></tr><tr><td>07-08</td><td>20,590</td><td>19,635</td><td class='neg'>-4.6%</td><td class='pos'>+631,416</td><td>719</td></tr><tr><td>07-09</td><td>22,245</td><td>21,930</td><td class='neg'>-1.4%</td><td class='pos'>+675,130</td><td>917</td></tr><tr><td>07-10</td><td>23,770</td><td>21,760</td><td class='neg'>-8.5%</td><td class='pos'>+526,881</td><td>768</td></tr><tr><td>07-13</td><td>20,370</td><td>14,915</td><td class='neg'>-26.8%</td><td class='neg'>-360,495</td><td>722</td></tr><tr><td>07-14</td><td>14,550</td><td>15,970</td><td class='pos'>+9.8%</td><td class='pos'>+2,196,319</td><td>1564</td></tr><tr><td>07-15</td><td>19,025</td><td>18,800</td><td class='neg'>-1.2%</td><td class='pos'>+3,702,912</td><td>956</td></tr><tr><td>07-16</td><td>15,630</td><td>14,455</td><td class='neg'>-7.5%</td><td class='pos'>+717,359</td><td>551</td></tr></tbody>
+  </table></div>
+
+  <h2>투명성 원칙</h2>
+  <div class="note" style="border-left-color:var(--ink3);">
+    <b>① 계좌진실이 항상 기준입니다.</b> 증권사(한국투자증권) 순자산(예수금+평가금액)에서 총입금을 뺀 값으로,
+    내부 장부와 무관하게 계산되므로 프로그램 버그가 있어도 이 숫자는 오염되지 않습니다.<br>
+    <b>② 내부 장부는 증권사 체결이력과 매일 대조합니다.</b> 2026-07-18 전수 대조에서 체결통보 누락으로
+    장부에서 빠져있던 사이클 수확 +510,787원을 발견해 소급 반영했고, 원인 버그를 수정했습니다.
+    모든 데이터 정정은 백업과 함께 이력으로 남깁니다.<br>
+    <b>③ 좋은 숫자만 골라 보여주지 않습니다.</b> 손실일(07-13 등)도 그대로 표기하며, 사이클 수확이
+    플러스여도 계좌진실이 마이너스면 마이너스가 성과입니다.
+  </div>
+
+  <footer>
+    <p>이 리포트는 매 거래일 장 마감 후 자동 생성됩니다. 계좌진실 = 증권사 순자산(예수금+평가금액) − 총입금.</p>
+    <p>생성 2026-07-18 18:08 KST</p>
+  </footer>
+</div>
+<script>
+const bars = [{"date": "07-07", "realized": 0, "cycles": 0}, {"date": "07-08", "realized": 631416, "cycles": 719}, {"date": "07-09", "realized": 675130, "cycles": 917}, {"date": "07-10", "realized": 526881, "cycles": 768}, {"date": "07-13", "realized": -360495, "cycles": 722}, {"date": "07-14", "realized": 2196319, "cycles": 1564}, {"date": "07-15", "realized": 3702912, "cycles": 956}, {"date": "07-16", "realized": 717359, "cycles": 551}];
+const svg = document.getElementById("chart");
+const W=720,H=240,padL=56,padR=10,padT=12,padB=26;
+const plotW=W-padL-padR, plotH=H-padT-padB;
+const maxAbs = Math.max(...bars.map(b=>Math.abs(b.realized)))*1.15 || 1;
+const zeroY = padT + plotH/2;
+const sy = v => zeroY - (v/maxAbs)*(plotH/2);
+const colW = plotW/bars.length, barW = colW*0.52;
+const ns="http://www.w3.org/2000/svg";
+const el=(t,a)=>{const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);return e;};
+const css=getComputedStyle(document.documentElement);
+svg.appendChild(el("line",{x1:padL,x2:W-padR,y1:zeroY,y2:zeroY,stroke:css.getPropertyValue("--line"),"stroke-width":1}));
+bars.forEach((b,i)=>{
+  const cx=padL+colW*i+colW/2, up=b.realized>=0;
+  const h=Math.abs(sy(b.realized)-zeroY), y=up?sy(b.realized):zeroY;
+  const r=el("rect",{x:cx-barW/2,y:y,width:barW,height:Math.max(h,1.5),rx:3,
+    fill:css.getPropertyValue(up?"--pos":"--neg")});
+  const t=el("title",{}); t.textContent=`${b.date}: ${b.realized.toLocaleString()}원 (${b.cycles}사이클)`;
+  r.appendChild(t); svg.appendChild(r);
+  const lab=el("text",{x:cx,y:up?y-6:y+h+13,"text-anchor":"middle","font-size":"10",
+    "font-family":"ui-monospace,monospace",fill:css.getPropertyValue("--ink2")});
+  lab.textContent=(b.realized/10000).toFixed(0)+"만"; svg.appendChild(lab);
+  const d=el("text",{x:cx,y:H-8,"text-anchor":"middle","font-size":"10",
+    fill:css.getPropertyValue("--ink3")});
+  d.textContent=b.date; svg.appendChild(d);
+});
+</script>
+</body></html>
