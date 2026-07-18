@@ -38,6 +38,11 @@
   svg { width:100%; height:auto; display:block; }
   footer { margin-top:40px; padding-top:16px; border-top:1px solid var(--line);
             font-size:12px; color:var(--ink3); }
+  .arch { display:flex; flex-wrap:wrap; gap:8px; }
+  .arch a { display:inline-block; padding:5px 11px; border:1px solid var(--line);
+             border-radius:16px; background:var(--card); color:var(--ink2);
+             text-decoration:none; font-size:12.5px; font-family:var(--mono); }
+  .arch a:hover { border-color:var(--pos); color:var(--pos); }
 </style></head><body>
 <div class="wrap">
   <div class="eyebrow">Grid Trading Daily</div>
@@ -80,9 +85,15 @@
     플러스여도 계좌진실이 마이너스면 마이너스가 성과입니다.
   </div>
 
+  <h2>지난 호 보기</h2>
+  <div class="arch">
+    <a href="index.html">최신호</a>
+  </div>
+
   <footer>
     <p>이 리포트는 매 거래일 장 마감 후 자동 생성됩니다. 계좌진실 = 증권사 순자산(예수금+평가금액) − 총입금.</p>
-    <p>생성 2026-07-18 19:14 KST</p>
+    <p>이 호의 고정 링크: <a href="2026-07-18.html" style="color:var(--ink3)">https://uher.github.io/grid-newsletter/2026-07-18.html</a></p>
+    <p>생성 2026-07-18 20:02 KST</p>
   </footer>
 </div>
 <script>
