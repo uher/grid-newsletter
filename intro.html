@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>자동매매 운용 기록 공유</title>
+<style>
+  :root {
+    --bg:#f7f6f2; --card:#fff; --line:#ddd9cf; --ink:#17160f; --ink2:#524e42; --ink3:#8a8574;
+    --pos:#2a78d6; --neg:#e34948; --mono:ui-monospace,Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#16160f; --card:#1e1d15; --line:#3a3728; --ink:#f5f3ea; --ink2:#c3bfab;
+             --ink3:#8d8873; --pos:#3987e5; --neg:#e66767; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font-family:-apple-system,"SF Pro Text","Segoe UI",sans-serif; line-height:1.65; }
+  .wrap { max-width:680px; margin:0 auto; padding:36px 20px 70px; }
+  .eyebrow { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink3);
+              font-weight:600; margin-bottom:6px; }
+  h1 { font-size:24px; margin:0 0 4px; }
+  .sub { color:var(--ink2); font-size:14px; margin-bottom:26px; }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink3);
+        margin:32px 0 12px; }
+  p { color:var(--ink2); font-size:14.5px; }
+  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:16px 0; }
+  .tile { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .tile .l { font-size:12px; color:var(--ink3); margin-bottom:4px; }
+  .tile .v { font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:19px; font-weight:600; }
+  .pos { color:var(--pos); } .neg { color:var(--neg); }
+  .note { background:var(--card); border:1px solid var(--line); border-left:3px solid var(--pos);
+           border-radius:8px; padding:14px 18px; font-size:13.5px; color:var(--ink2); margin:16px 0; }
+  ul { padding-left:20px; }
+  li { margin-bottom:10px; color:var(--ink2); font-size:14.5px; }
+  a { color:var(--pos); }
+  footer { margin-top:40px; padding-top:16px; border-top:1px solid var(--line);
+            font-size:12px; color:var(--ink3); }
+</style></head><body>
+<div class="wrap">
+  <div class="eyebrow">Grid Trading · 소개</div>
+  <h1>자동매매 운용 기록 공유</h1>
+  <div class="sub">모집이나 투자 권유가 아니라, 하고 있는 걸 있는 그대로 보여드리는 공유 페이지입니다</div>
+
+  <h2>뭘 하고 있냐면</h2>
+  <p>변동성이 큰 상장 상품(현재 2배 레버리지 ETN)에 <b>"내릴 때 나눠 사고, 오를 때
+  나눠 파는" 반복 매매(그리드)</b>를 자동화 시스템으로 24시간 무인으로 돌리고
+  있습니다. 큰 방향을 맞히려는 게 아니라, 가격이 오르내리는 출렁임 자체에서
+  작은 이익을 반복해 쌓는 방식이에요. 매매 밴드는 시장 상황에 맞춰 매일 조정될
+  수 있습니다. (구체 파라미터·핵심 로직은 비공개입니다.)</p>
+  <p>나름 의미 있는 시도인 것 같아서, 어떻게 돌아가는지 있는 그대로 공유합니다.
+  <b>한계도 명확히 말씀드릴게요:</b> 반등 없이 계속 하락하는 시장에서는 손실을
+  피할 수 없는 구조입니다.</p>
+
+  <h2>지금까지 어떻게 됐냐면 (계좌진실 기준 — 있는 그대로)</h2>
+  <div class="tiles">
+    <div class="tile"><div class="l">총 투자원금</div><div class="v">61,200,000원</div></div>
+    <div class="tile"><div class="l">현재 순자산</div><div class="v">60,434,732원</div></div>
+    <div class="tile"><div class="l">손익</div><div class="v neg">-765,268원 (-1.25%)</div></div>
+  </div>
+  <div class="note">
+    그렇습니다, 아직 마이너스입니다. 운용 2주차에 기초자산이
+    하루 −23% 갭다운(2026-07-13)하는 급락을 정통으로 맞았고, 그 손실 구간을 계속
+    회복하는 중이에요. 다만 같은 자금을 원장 개설일에 같은 상품으로 단순
+    보유했으면 -29.1%(-17,833,680원)였습니다 — 전략은 그 하락을 훨씬 얕게
+    방어하고 있어요. 성과는 계좌진실(순자산 − 총입금) 하나로만 말합니다 —
+    실현수익만 골라 보여주는 체리피킹 없이, 시스템 오류·정정 내역까지 그대로
+    공개해요.
+  </div>
+  <p>일일 성과는 자동 발행 뉴스레터로 투명하게 공개됩니다:
+  <a href="https://uher.github.io/grid-newsletter/">https://uher.github.io/grid-newsletter/</a> (텔레그램 구독: ukfundReportbot)</p>
+
+  <h2>궁금하면 이렇게 보시면 돼요</h2>
+  <ul>
+    <li><b>매수/매도가 실시간으로 찍히는 걸 그냥 지켜보고 싶다</b> → 알람봇 구독하면
+    체결될 때마다 알림이 옵니다. 부담 없이 구경하시면 돼요.</li>
+    <li><b>일일 성과 요약만 받아보고 싶다</b> → 뉴스레터 봇 구독하시면 매일 정리해서
+    보내드려요.</li>
+    <li><b>자동매매 자체에 관심이 생겼다</b> → 편하게 직접 연락 주세요. 어떻게
+    돌아가는지 더 설명해드릴 수 있고, 본인 계좌로 비슷한 걸 돌려보고 싶으시면
+    셋업하는 것도 언제든 도와드릴 수 있어요.</li>
+  </ul>
+  <p>이 문서는 <b>모집이나 투자 권유가 아니라, 하고 있는 걸 있는 그대로 보여드리는
+  공유 목적</b>입니다. 상세 이야기는 관심 있으신 분과 개별로 직접 나눌게요.</p>
+
+  <footer>
+    <p>생성 2026-07-23 19:03 KST · <a href="https://uher.github.io/grid-newsletter/">뉴스레터로 돌아가기</a></p>
+  </footer>
+</div>
+</body></html>
